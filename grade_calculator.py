@@ -12,18 +12,21 @@ def main():
             
             average = (mark1 + mark2 + mark3) / 3
             
-            print(f"\nStudent Name: {name}")
-            print(f"Average Marks: {average:.2f}")
-            
+            grade = ""
             if average >= 75:
-                print("Result: Grade A")
+                grade = "A"
             elif average >= 60:
-                print("Result: Grade B")
+                grade = "B"
             elif average >= 40:
-                print("Result: Grade C")
+                grade = "C"
             else:
-                print("Result: Fail")
-            print("-" * 20)
+                grade = "Fail"
+
+            print("\n" + "-" * 30)
+            print(f"Name    : {name}")
+            print(f"Average : {average:.1f}")
+            print(f"Grade   : {grade}")
+            print("-" * 30 + "\n")
                 
         except ValueError:
             print("Invalid input. Please enter numerical values for marks.")
